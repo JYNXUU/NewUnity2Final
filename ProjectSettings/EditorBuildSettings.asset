@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/FinalProjectScenes/MainMenu.unity
+    guid: 270d892e1173bab4abad312bbc6eda58
+  - enabled: 1
+    path: Assets/Scenes/FinalProjectScenes/TutorialRoom.unity
+    guid: f94cbcbc63648dc448f36b1ef3a16853
+  - enabled: 1
+    path: Assets/Scenes/FinalProjectScenes/ShapePuzzleRoom.unity
+    guid: e81904a8b4a897443a2614ccd2c586ed
+  - enabled: 1
+    path: Assets/Scenes/FinalProjectScenes/PlushBossRoom.unity
+    guid: 48f582c6704c7c949955b4b24fe741d1
+  - enabled: 1
+    path: Assets/Scenes/FinalProjectScenes/PlatformRoom.unity
+    guid: a8c4dc7c5693c33419035ef18dfd0de5
+  - enabled: 1
+    path: Assets/Scenes/FinalProjectScenes/EscapeRoom.unity
+    guid: b164c86a520abe54fa01c80a4cd73142
+  - enabled: 1
+    path: Assets/Scenes/FinalProjectScenes/WinScene.unity
+    guid: 743d48665fcb1814d86923f32fc98c76
+  - enabled: 1
+    path: Assets/Scenes/FinalProjectScenes/LoseScene.unity
+    guid: 4311dc431a9e90747b636a86346f6cce
+  m_configObjects: {}
