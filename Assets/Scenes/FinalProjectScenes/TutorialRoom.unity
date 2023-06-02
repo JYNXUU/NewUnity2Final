@@ -292,6 +292,10 @@ PrefabInstance:
       propertyPath: shootsound
       value: 
       objectReference: {fileID: 578623812}
+    - target: {fileID: 2479430261162785236, guid: 447a153a518edc34aa0b865432805aa9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7186950701418677280, guid: 447a153a518edc34aa0b865432805aa9, type: 3}
       propertyPath: m_Name
       value: PlayerCC
@@ -566,7 +570,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4687775105673560481, guid: 3d52315dc782416478f4e0eb6a2f33df, type: 3}
   m_PrefabInstance: {fileID: 4687775105733613030}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1348173145}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -1355,6 +1359,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216942188}
   m_Mesh: {fileID: 4300000, guid: 60c70eeb2c56d494ab0ae86f82cb6cc1, type: 3}
+--- !u!1 &217740861 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4687775105441954178, guid: 3d52315dc782416478f4e0eb6a2f33df, type: 3}
+  m_PrefabInstance: {fileID: 4687775105733613030}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &217740866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217740861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8273e3069b538459f407ddaf8fbd70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 0}
+  coinHUD: {fileID: 0}
 --- !u!1 &259301471
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,7 +1849,7 @@ GameObject:
   - component: {fileID: 343468479}
   - component: {fileID: 343468483}
   - component: {fileID: 343468484}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DummyEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1841,7 +1864,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 343468478}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.62
   m_Height: 2
@@ -2681,6 +2704,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bunny_01
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 2ac6829403a2bd341a75894c00db1769, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 2ac6829403a2bd341a75894c00db1769, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ac6829403a2bd341a75894c00db1769, type: 3}
 --- !u!4 &534965446 stripped
@@ -2993,7 +3024,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.21, z: 0.22}
   m_Center: {x: 1.4127588e-10, y: 0.13335024, z: -0.004740434}
---- !u!114 &544064796
+--- !u!114 &544064799
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3002,11 +3033,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 544064790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5a075271121a324c961a23246c7f9b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a42b960dfda5ed43b51a26aa94f274e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destinationObj: {fileID: 33879607}
-  pickupsound: {fileID: 544064791}
+  damage: 25
+  throwForce: 10
+  pickupsound: {fileID: 1903536167}
 --- !u!1 &578623806 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2479430261162785236, guid: 447a153a518edc34aa0b865432805aa9, type: 3}
@@ -4541,7 +4574,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ddb924ad8ca7103449518b9b3f728bdb, type: 2}
+  - {fileID: 2100000, guid: b10e38f5659669d44a8dcb1e9e601a54, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5160,7 +5193,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0bf7b2af54c1dac4b821c5643a425d2b, type: 2}
+  - {fileID: 2100000, guid: 89aaf2b71a5ef5246a5e782b2365f2d9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5415,7 +5448,7 @@ GameObject:
   - component: {fileID: 1242349183}
   - component: {fileID: 1242349182}
   - component: {fileID: 1242349181}
-  - component: {fileID: 1242349180}
+  - component: {fileID: 1242349186}
   m_Layer: 0
   m_Name: Block_Z (1)
   m_TagString: Untagged
@@ -5438,20 +5471,6 @@ Transform:
   m_Father: {fileID: 1437771548}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1242349180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1242349178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5a075271121a324c961a23246c7f9b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destinationObj: {fileID: 33879607}
-  pickupsound: {fileID: 1242349181}
 --- !u!82 &1242349181
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5628,6 +5647,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1242349178}
   m_Mesh: {fileID: -5843064522403451811, guid: f202298ccb5d7f145a673ac42878b49d, type: 3}
+--- !u!114 &1242349186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242349178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a42b960dfda5ed43b51a26aa94f274e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destinationObj: {fileID: 33879607}
+  damage: 25
+  throwForce: 10
+  pickupsound: {fileID: 1903536167}
 --- !u!1001 &1243804547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6002,20 +6037,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: de9b46797317e4e4281c40672c6b094d, type: 3}
   m_PrefabInstance: {fileID: 1301170834}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1301170837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1301170836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5a075271121a324c961a23246c7f9b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destinationObj: {fileID: 33879607}
-  pickupsound: {fileID: 1301170838}
 --- !u!82 &1301170838
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6141,6 +6162,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1301170845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301170836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a42b960dfda5ed43b51a26aa94f274e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destinationObj: {fileID: 33879607}
+  damage: 25
+  throwForce: 10
+  pickupsound: {fileID: 1903536167}
 --- !u!1 &1312462518
 GameObject:
   m_ObjectHideFlags: 0
@@ -6526,6 +6563,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1347186097}
   m_Mesh: {fileID: 4300000, guid: 60c70eeb2c56d494ab0ae86f82cb6cc1, type: 3}
+--- !u!1 &1348173145 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4687775105673560480, guid: 3d52315dc782416478f4e0eb6a2f33df, type: 3}
+  m_PrefabInstance: {fileID: 4687775105733613030}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1348173148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348173145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8273e3069b538459f407ddaf8fbd70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 0}
+  coinHUD: {fileID: 0}
 --- !u!1 &1355157560
 GameObject:
   m_ObjectHideFlags: 0
@@ -8304,6 +8360,10 @@ PrefabInstance:
       value: Ball_01
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 371e9db7876995147bceca5c0aa742ef, type: 3}
+      propertyPath: m_TagString
+      value: ThrowingBlock
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 371e9db7876995147bceca5c0aa742ef, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -8319,20 +8379,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 371e9db7876995147bceca5c0aa742ef, type: 3}
   m_PrefabInstance: {fileID: 1903536163}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1903536166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1903536165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5a075271121a324c961a23246c7f9b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destinationObj: {fileID: 33879607}
-  pickupsound: {fileID: 1903536167}
 --- !u!82 &1903536167
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8458,6 +8504,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1903536172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903536165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a42b960dfda5ed43b51a26aa94f274e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destinationObj: {fileID: 33879607}
+  damage: 25
+  throwForce: 10
+  pickupsound: {fileID: 1903536167}
 --- !u!1 &1910884021
 GameObject:
   m_ObjectHideFlags: 0
